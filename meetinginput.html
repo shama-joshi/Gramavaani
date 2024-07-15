@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          * {
+               box-sizing: border-box;
+          }
+
+          .row::after {
+               content: "";
+               clear: both;
+               display: table;
+			  
+          }
+
+          [class*="col-"] {
+			  
+               float: left;
+               padding: 15px;
+          }
+
+          html {
+               background-color: azure;
+               font-family: "Lucida Sans", sans-serif;
+          }
+
+          .header {
+			  
+               background-color: #9933cc;
+               color: #ffffff;
+               padding: 15px;
+               overflow: auto;
+			 
+          }
+
+          .menu a {
+               text-decoration: none;
+			  
+          }
+
+          .menu ul {
+               list-style-type: none;
+               margin: 0;
+               padding: 0;
+          }
+
+          .menu li {
+               padding: 20px;
+               margin-bottom: 7px;
+               background-color: rgba(57,231,145,1.00);
+               color: rgba(255,255,255,1.00);
+               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          }
+
+          .menu li:hover {
+               background-color:rgba(56,178,231,1.00);
+		 }
+         
+			  
+          .aside {
+			  border-radius: 50%;
+               background-color:rgba(57,231,145,1.00);
+               padding: 30px;
+               color: #ffffff;
+               text-align: center;
+               font-size: 14px;
+               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          }
+
+          .footer {
+               background-color: rgba(57,231,145,1.00);
+               color: #ffffff;
+               text-align: center;
+               font-size: 12px;
+               padding: 15px;
+          }
+
+          /* For mobile phones: */
+          [class*="col-"] {
+               width: 100%;
+          }
+
+          @media only screen and (min-width: 600px) {
+
+               /* For tablets: */
+               .col-s-1 {
+                    width: 8.33%;
+               }
+
+               .col-s-2 {
+                    width: 16.66%;
+               }
+
+               .col-s-3 {
+                    width: 25%;
+               }
+
+               .col-s-4 {
+                    width: 33.33%;
+               }
+
+               .col-s-5 {
+                    width: 41.66%;
+               }
+
+               .col-s-6 {
+                    width: 50%;
+               }
+
+               .col-s-7 {
+                    width: 58.33%;
+               }
+
+               .col-s-8 {
+                    width: 66.66%;
+               }
+
+               .col-s-9 {
+                    width: 75%;
+               }
+
+               .col-s-10 {
+                    width: 83.33%;
+               }
+
+               .col-s-11 {
+                    width: 91.66%;
+               }
+
+               .col-s-12 {
+                    width: 100%;
+               }
+          }
+
+          @media only screen and (min-width: 768px) {
+
+               /* For desktop: */
+               .col-1 {
+                    width: 8.33%;
+               }
+
+               .col-2 {
+                    width: 16.66%;
+               }
+
+               .col-3 {
+                    width: 25%;
+               }
+
+               .col-4 {
+                    width: 33.33%;
+               }
+
+               .col-5 {
+                    width: 41.66%;
+               }
+
+               .col-6 {
+                    width: 50%;
+               }
+
+               .col-7 {
+                    width: 58.33%;
+               }
+
+               .col-8 {
+                    width: 66.66%;
+               }
+
+               .col-9 {
+                    width: 75%;
+               }
+
+               .col-10 {
+                    width: 83.33%;
+               }
+
+               .col-11 {
+                    width: 91.66%;
+               }
+
+               .col-12 {
+                    width: 100%;
+               }
+          }
+
+          /* for form */
+          form {
+               margin: 0 auto;
+               padding: 10px;
+               width: 50%;
+               border: 3px solid #f1f1f1;
+          }
+
+          input[type=text],
+          input[type=time],
+          input[type=date] {
+               width: 100%;
+               padding: 12px 20px;
+               margin: 8px 0;
+               display: block;
+               border: 1px solid #ccc;
+               box-sizing: border-box;
+               font-size: 15px;
+          }
+
+          button {
+			   background-color: rgba(73,105,233,1.00);
+               color: white;
+               padding: 14px 20px;
+			  border-radius: 12px;
+               margin: 8px 0;
+               border: none;
+               cursor: pointer;
+               /* width: 30%; */
+               font-size: 15px;
+          }
+
+          button:hover {
+               opacity: 0.8;
+          }
+     </style>
+</head>
+
+<body>
+
+    
+
+     
+    
+
+          <div class="col-8 col-s-9">
+
+               <form action="serverside_scripts/meetinginputsecre.php" method="post">
+
+                    <div class="container">
+                         <h3>Crop Market Rate:</h3>
+
+                         <label for="meetingDate"> Date :</label>
+                         <input type="date" id="meetingDate" name="meetingDate" required>
+                         <br />
+
+                      
+
+                         
+						
+                     
+
+                         <label for="host">Select crop:</label> <br>
+                         <input type="radio" name="host" value="Paddy">Paddy<br>
+                         <input type="radio" name="host" value="Arecanut">Arecanut<br>
+                         <input type="radio" name="host" value="Sugarcane">Sugarcane<br>
+                         <input type="radio" name="host" value="Coconut">Coconut<br>
+                         <input type="radio" name="host" value="Pepper">Pepper<br>
+                         <input type="radio" name="host" value="co-co fruit">Co-co fruit<br>
+                         <input type="radio" name="host" value="Venilla">Venilla<br>
+                         <input type="radio" name="host" value="Elachi">Elachi<br>
+                         <input type="radio" name="host" value="Turmeric">Turmeric<br>
+                         <input type="radio" name="host" value="Cashew">Cashew<br><br>
+                         <label for="host">Price:</label> <br>
+                         <input type="text" id="initialInvestment" name="initialInvestment" placeholder="Enter price" required onChange="return validateForm()">
+                         <label id="invest" style="visibility:hidden;"></label>
+                         <br/>
+
+                         <div style="text-align: center;">
+                              <button type="submit">Enter</button>
+                         </div>
+
+                    </div>
+               </form>
+          </div>
+
+     </div>
+
+     
+	<script>
+	function Mplace()
+		 {
+		var mplace=document.getElementById('meetingPlace').value;
+		
+		var o=isNaN(mplace);
+	
+		if(!o)
+			{
+				
+				document.getElementById("mplace").style.visibility='visible';
+			 document.getElementById("mplace").innerHTML="numbers are not allowed";
+			document.getElementById("mplace").style.color="red";
+				return false;
+			}
+			 if(mplace.length<=2)
+			{
+				 document.getElementById("mplace").style.visibility='visible';
+			 document.getElementById("mplace").innerHTML="Give correct place name";
+			document.getElementById("mplace").style.color="red";
+				return false;
+			}
+		else
+			{
+					
+				document.getElementById("mplace").style.visibility='visible';
+			 document.getElementById("mplace").innerHTML="";
+			
+				return true;
+			}
+		
+		 }
+		function Mtname()
+		 {
+		var mname=document.getElementById('meetingTitle').value;
+		
+		var o=isNaN(mname);
+	
+		if(!o)
+			{
+				
+				document.getElementById("mname").style.visibility='visible';
+			 document.getElementById("mname").innerHTML="give the correct title";
+			document.getElementById("mname").style.color="red";
+				return false;
+			}
+			 if(mname.length<=2)
+			{
+				 document.getElementById("mname").style.visibility='visible';
+			 document.getElementById("mname").innerHTML="Give correct meeting name";
+			document.getElementById("mname").style.color="red";
+				return false;
+			}
+		else
+			{
+					
+				document.getElementById("mname").style.visibility='visible';
+			 document.getElementById("mname").innerHTML="";
+			
+				return true;
+			}
+		
+		 }
+          
+    function validateForm() {
+      var price = document.getElementById("price").value;
+      
+      // Remove whitespace from the input
+      price = price.trim();
+      
+      // Check if the input is empty
+      if (price === "") {
+        alert("Please enter a price.");
+        return false;
+      }
+      
+      // Check if the input is a valid number
+      if (isNaN(price)) {
+        alert("Please enter a valid number for the price.");
+        return false;
+      }
+      
+      // Check if the input is a positive number
+      if (parseFloat(price) <= 0) {
+        alert("Please enter a positive number for the price.");
+        return false;
+      }
+      
+     
+    }
+  
+</html>
+		
+	</script>
+		
+
+</body>
+
+</html>

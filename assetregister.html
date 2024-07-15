@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+		 
+          * {
+               box-sizing: border-box;
+          }
+
+          .row::after {
+               content: "";
+               clear: both;
+               display: table;
+			  
+          }
+
+          [class*="col-"] {
+			  
+               float: left;
+               padding: 15px;
+          }
+
+          html {
+               background-color: azure;
+               font-family: "Lucida Sans", sans-serif;
+          }
+
+          .header {
+			  
+               background-color: #9933cc;
+               color: #ffffff;
+               padding: 15px;
+               overflow: auto;
+			 
+          }
+
+          .menu a {
+               text-decoration: none;
+			  
+          }
+
+          .menu ul {
+               list-style-type: none;
+               margin: 0;
+               padding: 0;
+          }
+
+          .menu li {
+               padding: 8px;
+               margin-bottom: 7px;
+               background-color: rgba(57,231,145,1.00);
+               color: rgba(255,255,255,1.00);
+               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          }
+
+          .menu li:hover {
+               background-color:rgba(56,178,231,1.00);
+		 }
+         
+			 .aside {
+			   border-radius: 50%;
+               background-color:rgba(57,231,145,1.00);
+               padding: 30px;
+               color: #ffffff;
+               text-align: center;
+               font-size: 14px;
+               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          }
+          .footer {
+			   
+               background-color: rgba(57,231,145,1.00);
+               color: #ffffff;
+               text-align: center;
+               font-size: 12px;
+               padding: 15px;
+          }
+
+        
+          [class*="col-"] {
+               width: 100%;
+          }
+
+          @media only screen and (min-width: 600px) {
+
+               
+               .col-s-1 {
+                    width: 8.33%;
+               }
+
+               .col-s-2 {
+                    width: 16.66%;
+				  
+               }
+
+               .col-s-3 {
+                    width: 25%;
+               }
+
+               .col-s-4 {
+                    width: 33.33%;
+               }
+
+               .col-s-5 {
+                    width: 41.66%;
+               }
+
+               .col-s-6 {
+                    width: 50%;
+               }
+
+               .col-s-7 {
+                    width: 58.33%;
+               }
+
+               .col-s-8 {
+                    width: 66.66%;
+               }
+
+               .col-s-9 {
+                    width: 75%;
+               }
+
+               .col-s-10 {
+                    width: 83.33%;
+               }
+
+               .col-s-11 {
+                    width: 91.66%;
+               }
+
+               .col-s-12 {
+                    width: 100%;
+               }
+          }
+
+          @media only screen and (min-width: 768px) {
+
+              
+               .col-1 {
+                    width: 8.33%;
+               }
+
+               .col-2 {
+                    width: 16.66%;
+				   
+               }
+
+               .col-3 {
+                    width: 25%;
+               }
+
+               .col-4 {
+                    width: 33.33%;
+               }
+
+               .col-5 {
+                    width: 41.66%;
+               }
+
+               .col-6 {
+                    width: 50%;
+               }
+
+               .col-7 {
+                    width: 58.33%;
+               }
+
+               .col-8 {
+                    width: 66.66%;
+               }
+
+               .col-9 {
+                    width: 75%;
+               }
+
+               .col-10 {
+                    width: 83.33%;
+               }
+
+               .col-11 {
+                    width: 91.66%;
+               }
+
+               .col-12 {
+                    width: 100%;
+               }
+          }
+
+          
+          form {
+               margin: 0 auto;
+               padding: 10px;
+               width:90%;
+               border: 3px solid white;
+			  
+			  
+			  
+          }
+
+          input[type=text],
+          input[type=number] {
+               width: 100%;
+               padding: 12px 20px;
+               margin: 8px 0;
+               display: block;
+               border: 1px solid #ccc;
+               box-sizing: border-box;
+               font-size: 15px;
+			  
+          }
+			input[type=text]:focus;
+		 {
+			 outline: none;
+		 }
+          button {
+               background-color:  rgba(73,105,233,1.00);
+               color: white;
+               padding: 14px 20px;
+			  border-radius: 12px;
+               margin: 8px 0;
+               border: none;
+               cursor: pointer;
+              
+               font-size: 15px;
+          }
+
+          button:hover {
+               opacity: 0.8;
+          }
+     </style>
+</head>
+
+<body>
+
+     <div class="header">
+          
+          <div class="col-1 col-s-2">
+               <img src="images/emblem_karnataka.png" alt="emblem" style="width: 170%; height: 10%" />
+               
+      
+		 </div>
+          <div class="col-2 col-s-2">
+                <span style="font-size: 40px; line-height: 75px;">Gramavaani </span><br />
+			  <span style="font-size: 15px;">Karnataka sarkara</span><br/>
+			  <span style="font-size: 15px;">Panchayath:Bhairumbe</span>
+          </div>
+          <div class="col-9 col-s-10" style="text-align:right; padding: 5px; ">
+               Hello user! | <a href="homepage.html">Logout</a> 
+          </div>
+     </div>
+
+     <div class="row">
+          <div class="col-2 col-s-2 menu">
+               <ul>
+                   
+                    <a href="assetregister.html">
+                         <li>Asset registration</li>
+                    </a>
+                    <a href="BusinessLicense.html">
+                         <li>Business license application</li>
+                    </a>
+                    <a href="complaint.html">
+                         <li>Complaint registration</li>
+                    </a>
+                    <a href="serverside_scripts/meetinginputfetch.php">
+                         <li>Meeting input</li>
+                    </a>
+                    
+                    <a href="serverside_scripts/villagerinfofetch.php">
+                         <li>Villlagers information</li>
+                    </a>
+               </ul>
+          </div>
+
+          <div class="col-8 col-s-9">
+
+               <form action="serverside_scripts/assetregister.php" method="post" onSubmit="return totalasset() & housenum() & Name()" enctype="multipart/form-data">
+                    <div class="container">
+						
+                         <h2>Add Asset Information</h2>
+                         <hr>
+
+          <input type="text" id="name" name="name" placeholder="Enter name" required onChange=" return Name() ">
+			<label id="name1" style="visibility: hidden;"></label>
+		
+          <br />
+
+          <input type="text" id="houseNumber" name="houseNumber" placeholder="Enter house number" maxlength="3/" required onChange=" return housenum()">
+			<label id="hname" style="visibility: hidden;"></label>
+			
+          <br />
+                         <input type="text" id="assetDescription" name="assetDescription"
+                              placeholder="Enter asset description" required>
+						<br/>
+						
+					   <input type="text" id="totalAsset" name="totalAsset" placeholder="Enter total asset (In acres)" required onChange="return totalasset()">
+						<label id="asset" style="visibility:hidden;"></label>
+                            <br/>
+						<label for="">Choose your asset reference file:</label><br>
+        <input id="pdf" type="file" name="pdf" value=""  accept="application/pdf" required><br><br>
+        
+
+                         <div style="text-align: center;">
+                              <button type="submit">Add</button>
+                         </div>
+                    </div>
+               </form>
+          </div>
+
+          <div class="col-2 col-s-12">
+               <div class="aside">
+                    <p>We are for your services..!</p>
+				   
+               </div>
+          </div>
+     </div>
+
+     <div class="footer">
+          <p>Copyright reserved.</p>
+     </div>
+	<script>
+		function Name()
+	{
+		
+		
+		var j=document.getElementById('name').value;
+		
+		var k=isNaN(j);
+	
+		if(!k)
+			{
+				
+				document.getElementById("name1").style.visibility='visible';
+			 document.getElementById("name1").innerHTML="numbers are not allowed";
+			document.getElementById("name1").style.color="red";
+				return false
+			}
+		
+		if(j.length<=2)
+			{
+				 document.getElementById("name1").style.visibility='visible';
+			 document.getElementById("name1").innerHTML="firstname should contain atleast 3 letters";
+			document.getElementById("name1").style.color="red";
+				return false;
+			}
+		
+		else
+			{
+					
+				document.getElementById("name1").style.visibility='visible';
+			 document.getElementById("name1").innerHTML="";
+			document.getElementById("name1").style.color="green";
+				return true;
+			}
+	}
+	
+		function housenum()
+		{
+			var f=document.getElementById('houseNumber').value;
+		var re=/^[0-4]{1}[0-9]{1}[0-9]{1}$/;
+		var l=re.test(f);
+		
+		if(!l)	
+		{
+			document.getElementById("hname").style.visibility='visible';
+			document.getElementById("hname").innerHTML="!** Invalid House number **!";
+			document.getElementById("hname").style.color="red";
+			return false;
+				
+		
+				
+			
+		}
+			else
+			{
+				
+				
+			document.getElementById("hname").style.visibility='visible';
+			 document.getElementById("hname").innerHTML="";
+				return true;	
+				
+			}
+		}
+		function totalasset()
+		{
+			var f=document.getElementById('totalAsset').value;
+		var re=/^[0-4]{1}[0-9]{1}[0-9]{1}$/;
+		var l=re.test(f);
+		
+		if(!l)	
+		{
+			document.getElementById("asset").style.visibility='visible';
+			document.getElementById("asset").innerHTML="!** Acres should not be zero**!";
+			document.getElementById("asset").style.color="red";
+			return false;
+				
+		
+				
+			
+		}
+			else
+			{
+				
+				
+			document.getElementById("asset").style.visibility='visible';
+			 document.getElementById("asset").innerHTML="";
+				return true;	
+				
+			}
+		}
+		
+		
+		
+		
+	</script>
+
+</body>
+
+</html>
